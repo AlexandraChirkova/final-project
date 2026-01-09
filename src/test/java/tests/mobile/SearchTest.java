@@ -9,7 +9,7 @@ import screens.SearchScreen;
 
 @Tag("mobile")
 @DisplayName("Поиск товаров")
-public class SearchTest extends MobileBaseTest{
+public class SearchTest extends MobileBaseTest {
 
     SearchScreen searchScreen = new SearchScreen();
 
@@ -17,13 +17,9 @@ public class SearchTest extends MobileBaseTest{
     @DisplayName("После ввода 'чай' появляются подсказки")
     void searchSuggestionsShouldAppear() {
 
-        step("Ввести 'чай' в поиск", () ->
-                searchScreen.typeSearchQuery("чай")
-        );
-
-        step("Проверить, что подсказки появились", () ->
-                searchScreen.shouldSeeSuggestions()
-        );
+        searchScreen
+                .typeSearchQuery("чай")
+                .shouldSeeSuggestions();
     }
 
     @Test
