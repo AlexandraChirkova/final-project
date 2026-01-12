@@ -109,7 +109,7 @@ JAVA_HOME=$(/usr/libexec/java_home -v 17) \
 ```bash
 ./gradlew test -DdeviceHost=real
 `
-
+```
 ---
 
 ## [Allure отчет](https://jenkins.autotests.cloud/job/38-alexandrachirkova-final-e2e-test/5/allure/)
