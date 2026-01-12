@@ -15,6 +15,8 @@ public class MainPage {
     private final SelenideElement langSwitcher =$(".lang-switcher");
     private final SelenideElement searchInput = $("#search_input");
     private final SelenideElement deliveryMode = $("[alt='Локация']");
+    private final SelenideElement mainMenu = $(".category-list");
+    private final SelenideElement catalogButton = $(".category-list-icon");
 
 
     @Step("Открыть главную")
@@ -54,5 +56,20 @@ public class MainPage {
 
     }
 
+    @Step("Проверить, что меню категорий отображается")
+    public MainPage checkMainMenuIsVisible() {
+        mainMenu.shouldBe(visible);
+        return this;
+    }
 
+    @Step("Проверить, что кнопка Каталог отображается")
+    public MainPage checkCatalogButtonIsVisible() {
+        catalogButton.shouldBe(visible);
+        return this;
+    }
+
+    public MainPage checkSearchFieldIsVisible() {
+        searchInput.shouldBe(visible);
+        return this;
+    }
 }

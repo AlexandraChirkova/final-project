@@ -2,12 +2,19 @@ package config;
 
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 import java.util.Map;
 
 public class WebDriverProvider {
 
     public static void apply(WebConfig cfg) {
+
+        if ("chrome".equals(cfg.browser())) {
+            WebDriverManager.chromedriver().setup();
+        }
+
         Configuration.baseUrl = cfg.baseUrl();
         Configuration.browser = cfg.browser();
         Configuration.browserVersion = cfg.browserVersion();
