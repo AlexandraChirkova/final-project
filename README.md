@@ -136,8 +136,8 @@ JAVA_HOME=$(/usr/libexec/java_home -v 17) \
 ## [Allure отчет](https://jenkins.autotests.cloud/job/38-alexandrachirkova-final-e2e-test/5/allure/)
 ---
 <p align="center">
-<img src="images/screenshots/allure2.png"  />
 <img src="images/screenshots/allure1.png"  />
+<img src="images/screenshots/allure2.png"  />
 </p>
 
 ---
