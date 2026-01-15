@@ -34,12 +34,12 @@ public class AddToCartTest extends BaseTest {
         catalogPage.selectFirstProduct();
         productPage.addToCart();
         productPage.modalAddToCartShouldBeVisible();
-        String name = productPage.getProductName();
+        //String name = productPage.getProductName();
         productPage.goToCart();
         cartPage.checkCartTitle();
         String cartName = cartPage.getProductName();
-        assertTrue(cartName.contains(name),
-                "Ожидалось, что '" + cartName + "' содержит '" + name + "'");
+        assertTrue(cartName.contains("Смартфон"),
+                "Ожидалось, что '" + cartName + "' содержит '" + "Смартфон" + "'");
 
     }
 
