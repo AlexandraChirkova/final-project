@@ -51,7 +51,7 @@
 
 ## 🔧 Сборка в [Jenkins](https://jenkins.autotests.cloud/job/38-alexandrachirkova-final-e2e-test/)
 <p align="center">
-<img src="images/screenshots/Jenkins.png" />
+<img src="images/screenshots/Jenkins.png"/>
 </p>
 
 ---
