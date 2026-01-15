@@ -66,11 +66,11 @@
 
 ## Запуск из терминала
 
-<h3>Локальный запуск:</h3>
+<h3>Локальный запуск web тестов:</h3>
 
 <div style="background:#f6f8fa; padding:16px; border-radius:6px;">
 <pre>
-gradle clean demoqa_test
+./gradlew web_test -DrunMode=local 
 </pre>
 </div>
 
@@ -78,7 +78,7 @@ gradle clean demoqa_test
 
 <div style="background:#f6f8fa; padding:16px; border-radius:6px;">
 <pre>
-clean demoqa_test
+clean web_test
 "-Dbrowser=${BROWSER} "
 "-DbrowserVersion=${BROWSER_VERSION}"
 "-DbrowserSize=${BROWSER_SIZE}"
@@ -86,32 +86,52 @@ clean demoqa_test
 </pre>
 </div>
 
-## ✅ ОСНОВНЫЕ КОМАНДЫ ЗАПУСКА мобильных тестов
 
-### ▶ 1. Эмулятор (локально, PROD Wikipedia)
+### Запуск мобильных тестов из терминала на Эмуляторе (локально)
 
-```bash
-./gradlew test -DdeviceHost=emulation
+<h3>Перед запуском мобильных тестов надо запустить сервер</h3>
 
+<div style="background:#f6f8fa; padding:16px; border-radius:6px;">
+<pre>
+appium server --base-path /wd/hub
+</pre>
+</div>
+
+<h3>После запуска сервера, выполнить команду</h3>
+
+<div style="background:#f6f8fa; padding:16px; border-radius:6px;">
+<pre>
+./gradlew clean mobile_test -DdeviceHost=emulation
+</pre>
+</div>
+
+### Запуск мобильных тестов из терминала на Эмуляторе на 17 версии JAVA (локально)
+
+<div style="background:#f6f8fa; padding:16px; border-radius:6px;">
+<pre>
 JAVA_HOME=$(/usr/libexec/java_home -v 17) \
 ./gradlew clean mobile_test -DdeviceHost=emulation
+</pre>
+</div>
 
-```
-если хотим изменить параметры запуска
 
-```bash
+### Если хотим изменить параметры запуска
+
+<div style="background:#f6f8fa; padding:16px; border-radius:6px;">
+<pre>
 ./gradlew clean test \
   -Ddevice.name=Nexus_5X \
   -Dplatform.name=Android \
-  -Dapp.package=org.wikipedia
-```
+  -Dapp.package=kz.flip.mobile
+</pre>
+</div>
 
-### ▶ 2. Реальное устройство (USB, PROD Wikipedia)
-```bash
-./gradlew test -DdeviceHost=real
-`
-```
----
+### Запуск мобильных тестов на реальном устройстве (USB)
+<div style="background:#f6f8fa; padding:16px; border-radius:6px;">
+<pre>
+./gradlew clean mobile_test -DdeviceHost=real
+</pre>
+</div>
 
 ## [Allure отчет](https://jenkins.autotests.cloud/job/38-alexandrachirkova-final-e2e-test/5/allure/)
 ---
