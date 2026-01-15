@@ -18,7 +18,6 @@ public class MainPageTest extends BaseTest {
     @DisplayName("На главной странице есть меню")
     @Severity(SeverityLevel.NORMAL)
     @Owner("allure8")
-    @AllureId("")
     @Description("Отображение меню на главной")
     void mainMenuShouldBeVisible() {
         mainPage.openPage()
@@ -29,7 +28,6 @@ public class MainPageTest extends BaseTest {
     @DisplayName("Проверить наличие Каталог")
     @Severity(SeverityLevel.NORMAL)
     @Owner("allure8")
-    @AllureId("")
     @Description("Отображение каталога на главной")
     void catalogShouldBeVisible() {
         mainPage.openPage()
@@ -40,7 +38,6 @@ public class MainPageTest extends BaseTest {
     @DisplayName("На главной странице есть строка поиска")
     @Severity(SeverityLevel.NORMAL)
     @Owner("allure8")
-    @AllureId("")
     @Description("Отображение строки поиска на главной")
     void searchFieldShouldBeVisible() {
         mainPage.openPage()

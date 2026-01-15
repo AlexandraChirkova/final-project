@@ -27,7 +27,6 @@ public class AddToCartTest extends BaseTest {
     @Story("Добавление первого товара в корзину")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("allure8")
-    @AllureId("")
     @Description("Проверяем добавление товара в корзину")
     public void addProductToCartTest() {
         mainPage.openPage()
@@ -48,7 +47,6 @@ public class AddToCartTest extends BaseTest {
     @Story("Проверка каунтера в корзине")
     @Severity(SeverityLevel.NORMAL)
     @Owner("allure8")
-    @AllureId("")
     @Description("Проверяем каунтер в корзине")
     public void checkCountCartTest() {
         mainPage.openPage()

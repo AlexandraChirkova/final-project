@@ -20,7 +20,6 @@ public class PickupPointTest extends BaseTest {
     @Story("Способы доставки")
     @Severity(SeverityLevel.NORMAL)
     @Owner("allure8")
-    @AllureId("")
     @Description("Проверяем точки самовывоза и доставки")
     void pickUpPointTest() {
         mainPage.openPage()

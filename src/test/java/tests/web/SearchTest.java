@@ -20,7 +20,6 @@ public class SearchTest extends BaseTest{
     @ParameterizedTest(name = "Поиск товара: {0}")
     @Severity(SeverityLevel.NORMAL)
     @Owner("allure8")
-    @AllureId("")
     @Description("Результаты поиска")
     void searchProductByName(String searchQuery) {
         mainPage.openPage()

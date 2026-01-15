@@ -22,7 +22,6 @@ public class LanguageSwitchTest extends BaseTest {
     @Story("Смена языка на главной")
     @Severity(SeverityLevel.NORMAL)
     @Owner("allure8")
-    @AllureId("")
     @Description("Проверяем смену языка")
     @EnumSource(Languages.class)
     void checkLanguageSwitch(Languages lang) {
