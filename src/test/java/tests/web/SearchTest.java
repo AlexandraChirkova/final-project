@@ -1,5 +1,6 @@
 package tests.web;
 
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,6 +10,7 @@ import pages.MainPage;
 
 @Tag("web")
 @DisplayName("Поиск товаров")
+@Epic("Поиск")
 public class SearchTest extends BaseTest{
 
     MainPage mainPage = new MainPage();
@@ -16,6 +18,10 @@ public class SearchTest extends BaseTest{
 
     @ValueSource(strings = {"смартфон", "Книги"})
     @ParameterizedTest(name = "Поиск товара: {0}")
+    @Severity(SeverityLevel.NORMAL)
+    @Owner("allure8")
+    @AllureId("")
+    @Description("Результаты поиска")
     void searchProductByName(String searchQuery) {
         mainPage.openPage()
                 .searchQuery(searchQuery);

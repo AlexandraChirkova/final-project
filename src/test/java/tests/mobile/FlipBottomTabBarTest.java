@@ -1,5 +1,7 @@
 package tests.mobile;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -10,6 +12,8 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("mobile")
 @DisplayName("Проверка таб бара")
+@Epic("Мобильная версия")
+@Feature("Проверка таб бара")
 public class FlipBottomTabBarTest extends MobileBaseTest {
 
     BottomTabBarScreen bottomTabBar = new BottomTabBarScreen();
