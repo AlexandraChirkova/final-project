@@ -49,7 +49,7 @@
 
 ---
 
-## 🔧 Сборка в [Jenkins](https://jenkins.autotests.cloud/job/38-alexandrachirkova-final-e2e-test/)
+## 🔧 Сборка в [Jenkins](https://jenkins.autotests.cloud/job/38-alexandrachirkova-final-project-web/)
 <p align="center">
 <img src="images/screenshots/Jen.png"/>
 </p>
@@ -133,7 +133,7 @@ JAVA_HOME=$(/usr/libexec/java_home -v 17) \
 </pre>
 </div>
 
-## [Allure отчет](https://jenkins.autotests.cloud/job/38-alexandrachirkova-final-e2e-test/5/allure/)
+## [Allure отчет](https://jenkins.autotests.cloud/job/38-alexandrachirkova-final-project-web/allure/)
 ---
 <p align="center">
 <img src="images/screenshots/allure1.png"  />
@@ -142,7 +142,7 @@ JAVA_HOME=$(/usr/libexec/java_home -v 17) \
 
 ---
 
-## Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/5013/dashboards)
+## Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/5077/dashboards)
 ---
 <p align="center">
 <img src="images/screenshots/allureTestOps.png" />
