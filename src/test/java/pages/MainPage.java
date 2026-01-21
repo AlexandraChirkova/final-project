@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 import helpers.Languages;
 import io.qameta.allure.Step;
+import pages.components.DeliveryMode;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -14,10 +15,11 @@ public class MainPage {
     private final SelenideElement logoFlip= $("[alt='flip.kz']");
     private final SelenideElement langSwitcher =$(".lang-switcher");
     private final SelenideElement searchInput = $("#search_input");
-    private final SelenideElement deliveryMode = $("[alt='Локация']");
+    private final SelenideElement delivery = $("[alt='Локация']");
     private final SelenideElement mainMenu = $(".category-list");
     private final SelenideElement catalogButton = $(".category-list-icon");
 
+    DeliveryMode deliveryMode = new DeliveryMode();
 
     @Step("Открыть главную")
     public MainPage openPage() {
@@ -52,7 +54,8 @@ public class MainPage {
 
     @Step("Изменить способ доставки")
     public void selectDeliveryMode() {
-        deliveryMode.click();
+        delivery.click();
+        deliveryMode.pickupPointShouldBeVisible();
 
     }
 

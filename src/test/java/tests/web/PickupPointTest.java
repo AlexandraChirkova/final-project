@@ -1,6 +1,5 @@
 package tests.web;
 
-import pages.components.DeliveryMode;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -14,7 +13,6 @@ import pages.MainPage;
 public class PickupPointTest extends BaseTest {
 
     MainPage mainPage = new MainPage();
-    DeliveryMode deliveryMode = new DeliveryMode();
 
     @Test
     @Story("Способы доставки")
@@ -24,7 +22,5 @@ public class PickupPointTest extends BaseTest {
     void pickUpPointTest() {
         mainPage.openPage()
                 .selectDeliveryMode();
-        deliveryMode.pickupPointShouldBeVisible();
-
     }
 }
