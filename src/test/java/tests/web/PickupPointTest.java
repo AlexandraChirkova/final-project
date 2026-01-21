@@ -1,6 +1,6 @@
 package tests.web;
 
-import components.DeliveryMode;
+import pages.components.DeliveryMode;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;

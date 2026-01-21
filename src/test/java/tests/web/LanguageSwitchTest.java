@@ -1,7 +1,7 @@
 package tests.web;
 
 
-import components.Languages;
+import helpers.Languages;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -28,7 +28,7 @@ public class LanguageSwitchTest extends BaseTest {
 
         mainPage.openPage()
                 .switchLang()
-                .chooseLang(lang)
+              .chooseLang(lang)
                 .checkLang(lang);
 
     }

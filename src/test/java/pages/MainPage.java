@@ -1,7 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import components.Languages;
+import helpers.Languages;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;

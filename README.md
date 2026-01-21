@@ -1,5 +1,6 @@
 
-# Проект по автоматизации тестирования <a href="https://www.flip.kz/">flip.kz</a> <a href="https://www.flip.kz/"><img src="images/logo/fliplogo.png" alt="Flip.kz" height="30" style="position: relative; top: 6px; margin-left: 6px;"></a>
+# Проект по автоматизации тестирования <a href="https://www.flip.kz/">flip.kz</a> <a href="https://www.flip.kz/">
+<img src="images/logo/flipBig.jpg" alt="Flip.kz" height="200" width="700" style="position: relative; top: 6px; margin-left: 6px;"></a>
 
 > Flip.kz — крупный казахстанский интернет-магазин с широким ассортиментом товаров: от книг, электроники и косметики до товаров для дома, канцелярии и детских товаров.
 > Платформа известна собственной быстрой доставкой, удобным мобильным приложением и выгодными предложениями по акциям и бонусной программе.
@@ -154,7 +155,7 @@ JAVA_HOME=$(/usr/libexec/java_home -v 17) \
 
 ---
 <p align="center">
-<img src="images/screenshots/telegramBot.png" />
+<img src="images/screenshots/telegramBot.png" width="400" />
 </p>
 
 ---

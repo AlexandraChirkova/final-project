@@ -1,4 +1,4 @@
-package components;
+package helpers;
 
 public enum Languages {
     RU("ru", "Войти"),
