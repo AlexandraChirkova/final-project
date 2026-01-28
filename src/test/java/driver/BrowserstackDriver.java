@@ -2,6 +2,7 @@ package driver;
 
 import com.codeborne.selenide.WebDriverProvider;
 import config.BrowserstackConfig;
+import helpers.BrowserstackAppUploader;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -21,14 +22,31 @@ public class BrowserstackDriver implements WebDriverProvider {
     public WebDriver createDriver(@Nonnull Capabilities ignored) {
 
         MutableCapabilities caps = new MutableCapabilities();
+        MutableCapabilities bstackOptions = new MutableCapabilities();
 
-        caps.setCapability("browserstack.user", config.bsUser());
-        caps.setCapability("browserstack.key", config.bsKey());
+        bstackOptions.setCapability("userName", config.bsUser());
+        bstackOptions.setCapability("accessKey", config.bsKey());
 
-        caps.setCapability("app", config.androidApp());
+        caps.setCapability("platformName", config.platformName());
+        caps.setCapability("appium:deviceName", config.androidDevice());
+        caps.setCapability("appium:platformVersion", config.androidOsVersion());
+        caps.setCapability("appium:automationName", config.automationName());
 
-        caps.setCapability("deviceName", config.androidDevice());
-        caps.setCapability("platformVersion", config.androidOsVersion());
+        String appValue = config.androidApp();
+        String app;
+
+        if (appValue.startsWith("bs://")) {
+            app = appValue;
+        } else {
+            app = BrowserstackAppUploader.upload(
+                    config.bsUser(),
+                    config.bsKey(),
+                    appValue
+            );
+        }
+
+        caps.setCapability("appium:app", app);
+        caps.setCapability("bstack:options", bstackOptions);
 
         try {
             return new RemoteWebDriver(

@@ -9,6 +9,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import screens.UpdatePopup;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
@@ -24,6 +25,7 @@ public class MobileBaseTest {
 
         Configuration.remoteConnectionTimeout = 10000;
         Configuration.remoteReadTimeout = 60000;
+
     }
 
     @BeforeEach
@@ -33,6 +35,7 @@ public class MobileBaseTest {
                         .screenshots(true)
                         .savePageSource(false));
         open();
+        new UpdatePopup().closeIfVisible();
         KeyboardHelper.hideKeyboard();
     }
 

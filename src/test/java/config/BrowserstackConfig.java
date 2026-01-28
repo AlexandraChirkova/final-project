@@ -18,9 +18,15 @@ public interface BrowserstackConfig extends Config {
     @Key("android.app")
     String androidApp();
 
+    @Key("platform.name")
+    String platformName();
+
     @Key("android.device")
     String androidDevice();
 
     @Key("android.os_version")
     String androidOsVersion();
+
+    @Key("automation.name")
+    String automationName();
 }
