@@ -28,7 +28,6 @@ public class MobileBaseTest {
 
     @BeforeEach
     void addListenerAndOpen() {
-        SelenideLogger.removeListener("AllureSelenide");
         SelenideLogger.addListener("AllureSelenide",
                 new AllureSelenide()
                         .screenshots(true)

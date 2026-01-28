@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 import org.aeonbits.owner.Config.Sources;
 
 @Sources({"classpath:browserstack.properties"})
-public interface AppConfig extends Config {
+public interface BrowserstackConfig extends Config {
 
     @Key("bs.user")
     String bsUser();
