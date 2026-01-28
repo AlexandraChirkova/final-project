@@ -1,21 +1,23 @@
 package screens;
 
-import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
 
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static io.appium.java_client.AppiumBy.androidUIAutomator;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class UpdatePopup {
 
-    private final SelenideElement remindLaterButton =
-            $(androidUIAutomator(
-                    "new UiSelector().textContains(\"НАПОМНИТЬ\")"
-            ));
-
     public void closeIfVisible() {
-        if (remindLaterButton.is(visible)) {
-            remindLaterButton.click();
+        try {
+            AndroidDriver driver =
+                    (AndroidDriver) WebDriverRunner.getWebDriver();
+
+            driver.pressKey(new KeyEvent(AndroidKey.BACK));
+
+        } catch (Exception e) {
+            System.out.println("UpdatePopup ignored: " + e.getMessage());
         }
     }
+
 }
